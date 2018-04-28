@@ -2,6 +2,8 @@ const express = require("express");
 const hbs = require("hbs");
 const fs = require("fs");
 
+const PORT = process.env.PORT;
+
 var app = express();
 
 hbs.registerPartials(__dirname + "/views/partials");
@@ -66,6 +68,6 @@ app.get("/bad", (req, res) => {
   });
 });
 
-app.listen(3500, () => {
+app.listen(PORT || 3500, () => {
   console.log("listening on 3500");
 });
