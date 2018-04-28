@@ -53,6 +53,13 @@ app.get("/about", (req, res) => {
   });
 });
 
+app.get("/projects", (req, res) => {
+  res.render("projects.hbs", {
+    pageTitle: "Project Page",
+    links: "Links will go here I guess"
+  });
+});
+
 app.get("/bad", (req, res) => {
   res.json({
     errorMessage: "You fucked up"
