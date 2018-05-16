@@ -2,7 +2,7 @@ const express = require("express");
 const hbs = require("hbs");
 const fs = require("fs");
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3500;
 
 var app = express();
 
@@ -68,6 +68,6 @@ app.get("/bad", (req, res) => {
   });
 });
 
-app.listen(PORT || 3500, () => {
-  console.log("listening on 3500");
+app.listen(PORT, () => {
+  console.log(`listening on ${PORT}`);
 });
